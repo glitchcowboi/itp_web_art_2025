@@ -1,0 +1,100 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            
+            <title>Big Sur Roadtrip-Pull Out Like Your Daddy Should Have</title>
+
+            <link rel="shortcut icon" href="">
+
+            <style>
+                body {
+                    background-color: #0000;
+                }
+
+                #love-letter{
+                position: absolute;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                opacity: .8;
+                text-shadow: -5px 3px 9px white;
+                font-size: 40px;
+                font-family: monospace;
+                text-align: left;
+                }
+
+                #love-letter2{
+                position: absolute;
+                z-index: 5;
+                width: 100%;
+                height: 100%;
+                opacity: .8;
+                text-shadow: -5px 3px 9px white;
+                font-size: 40px;
+                font-family: monospace;
+                text-align: right;
+                }
+
+                #redwoods{
+                position: absolute;
+                z-index: -10;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* covers bg */
+                }
+
+            </style>
+        </head>
+
+        <body>
+
+            <div id="love-letter">
+                this place was never truly ours, just a borrowed moment in time.
+            </div>
+
+            <div id="love-letter2">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                if only pixels could capture the feeling...
+            </div>
+
+            <img id="redwoods" src="images/redwood_trees.jpg">
+
+            <script>
+
+            document.addEventListener('click', function(e) {
+                var gif = document.createElement('img');
+                gif.src = 'images/firem.gif';
+                gif.style.position = 'absolute';
+                gif.style.left = e.clientX + 'px';
+                gif.style.top = e.clientY + 'px';
+                gif.style.zIndex = 10; 
+                gif.style.width = '100px'; // size
+                gif.style.height = 'auto';
+
+                document.body.appendChild(gif);
+
+                setTimeout(function() {
+                    gif.remove();
+                }, 7000); //flames fade out after 7 secs
+            });
+
+            </script>
+
+        </body>
+    </html>

@@ -1,0 +1,73 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            
+            <title>Big Sur Roadtrip-Pull Out Like Your Daddy Should Have</title>
+
+            <link rel="shortcut icon" href="">
+
+            <style>
+                body {
+                    background-color: #ffff;
+                }
+
+                #waterfall{
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -5;
+                width: 100%;
+                height: 100%;
+                border: none;
+                object-fit: cover;
+                }
+
+                #phone-pic {
+                position: absolute;
+                bottom: .25%;
+                z-index: 7;
+                max-width: 75%; /* no screen overflow */
+                max-height: 90vh;
+               }
+
+            </style>
+        </head>
+
+        <body>
+
+<!--phone image-->
+            <div class="phone-holder">
+                <img id="phone-pic" src="images/phone_02.png">
+            </div>
+
+            <div class="bg-img"> 
+                <img id="waterfall" src="images/Julia_Pfeiffer.jpg">
+            </div>
+
+            <script>
+                document.addEventListener('mousemove', function(e) {
+                    var phonePic = document.getElementById('phone-pic');
+                    phonePic.style.left = (e.clientX - phonePic.offsetWidth / 2) + 'px';
+                });
+
+                // pic download js code
+                document.addEventListener('mousemove', function(e) {
+    var phonePic = document.getElementById('phone-pic');
+    phonePic.style.left = (e.clientX - phonePic.offsetWidth / 2) + 'px';
+});
+
+document.addEventListener('click', function() {
+    var memoryImages = ['memory_01.png', 'memory_02.png', 'memory_03.png'];
+    var randomIndex = Math.floor(Math.random() * memoryImages.length);
+    var selectedImage = memoryImages[randomIndex];
+
+    var newWindow = window.open('', '_blank', 'width=400,height=400');
+    newWindow.document.write('<html><head><title>take a pic, it\'ll last longer</title></head><body><img src="images/' + selectedImage + '" style="max-width: 100%; height: auto;"></body></html>');
+    newWindow.focus();
+});
+
+            </script>
+
+        </body>
+    </html>

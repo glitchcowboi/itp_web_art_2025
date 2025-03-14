@@ -1,0 +1,109 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            
+            <title>Big Sur Roadtrip-Pull Out Like Your Daddy Should Have</title>
+
+            <link rel="shortcut icon" href="">
+
+            <style>
+                body {
+                    background-color: #00000000;
+                }
+
+                .map-container {
+                display: flex;
+                justify-content: center; /* horizontal center */
+                align-items: center; /* vertical center */
+                height: 100vh; /* full height */
+                }
+
+                #big-sur-map {
+                position: relative; /* trying to make map points stay roughly same spot on the map */
+                z-index: 1;
+                max-width: 90%; /* no screen overflow */
+                max-height: 90vh;
+               }
+
+               #map-point1 {
+                position: absolute;
+                width: 3%;
+                height: auto;
+                left: 34%;
+                top: 45%;
+                z-index: 4;
+               }
+
+               #map-point2 {
+                position: absolute;
+                width: 3%;
+                height: auto;
+                left: 45%;
+                top: 60%;
+                z-index: 4;
+               }
+
+               #map-point3 {
+                position: absolute;
+                width: 3%;
+                height: auto;
+                left: 57%;
+                top: 78%;
+                z-index: 4;
+               }
+
+               .hwy-1-drive {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -10;
+                width: 100%;
+                height: 100%;
+                border: none;
+                object-fit: cover; /* covers bg */
+                }
+
+            </style>
+        </head>
+
+        <body>
+            
+<!--Source = screenshot from Google Maps-->
+            <div class="map-container">
+                <img id="big-sur-map" src="images/big_sur_map_02.png">
+            </div>
+
+            <iframe class="hwy-1-drive"
+            src="https://www.youtube.com/embed/ubexuErXeyI?si=PVpAXA3eZFhg0qjF&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=ubexuErXeyI&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;fs=0&amp;disablekb=1&amp;start=10" 
+            title="omg babe pull over for a pic" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+            </iframe>
+
+<!--Source = noun project creator projecthayat-->
+<!--map marker images with links-->
+                <a href="location_01.html">
+                    <img id="map-point1" src="images/map_point.png">
+                </a>
+
+            <a href="location_02.html">
+                <img id="map-point2" src="images/map_point.png">
+            </a>
+            
+            <a href="location_03.html">
+                <img id="map-point3" src="images/map_point.png">
+            </a>
+
+            <script>
+                const iframe = document.querySelector('.hwy-1-drive');
+            
+                setTimeout(() => {
+                  iframe.style.filter = 'blur(7px) saturate(275%)';
+                });
+              </script>
+
+        </body>
+    </html>
